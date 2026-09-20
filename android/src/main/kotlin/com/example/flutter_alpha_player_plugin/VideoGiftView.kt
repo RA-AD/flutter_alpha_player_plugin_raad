@@ -161,9 +161,8 @@ class VideoGiftView: FrameLayout,LifecycleOwner {
         }
     }
 
-    override fun getLifecycle(): Lifecycle {
-       return mRegistry
-    }
+    override val lifecycle: Lifecycle
+    get() = mRegistry
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
